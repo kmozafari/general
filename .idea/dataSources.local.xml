@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - sms@localhost" uuid="ea31ed7d-ef61-4d05-a773-45e756a2537b">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>sms.*</schema-pattern>
+      <default-schemas>sms.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - testsms@localhost" uuid="60c3d8bf-2f15-478e-87bc-caa865801ac8">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>testsms.*</schema-pattern>
+      <default-schemas>testsms.*</default-schemas>
+    </data-source>
+    <data-source name="H2 - mem:test" uuid="53140c56-2828-44d5-9756-8a1345e86fd7">
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <schema-pattern>TEST.PUBLIC</schema-pattern>
+      <default-schemas>TEST.PUBLIC</default-schemas>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,6 @@
+Intellij IDEA Bug:
+-https://youtrack.jetbrains.com/issue/IDEA-107048
+-http://stackoverflow.com/questions/36902265/spring-boot-jsp
+
+solution: run application with "mvn spring-boot:run" when your path is in application module
+
