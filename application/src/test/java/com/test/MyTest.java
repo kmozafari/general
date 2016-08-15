@@ -29,26 +29,26 @@ public class MyTest {
 
     @Before
     public void addData() {
-
-        User user = new User();
-        user.setEmail("a@b.com");
-        user.setPassword("aaaaaa");
-        user.setRole(Role.ADMIN);
-
-        userService.addUser(user);
+//
+//        User user = new User();
+//        user.setEmail("a@b.com");
+//        user.setPassword("aaaaaa");
+//        user.setRole(Role.ADMIN);
+//
+//        userService.addUser(user);
     }
 
 
     @Test
     public void name() throws Exception {
-        User user = new User();
-        user.setEmail("e@n.com");
-        user.setPassword("bbbbb");
-        user.setRole(Role.USER);
-        userService.addUser(user);
-
-        User u = userService.getUserByEmail("a@b.com");
-        System.out.println(u.getEmail() + " " + u.getPassword());
-        System.out.println("hi in test");
+//        User user = new User();
+//        user.setEmail("e@n.com");
+//        user.setPassword("bbbbb");
+//        user.setRole(Role.USER);
+//        userService.addUser(user);
+//
+//        User u = userService.getUserByEmail("a@b.com");
+//        System.out.println(u.getEmail() + " " + u.getPassword());
+//        System.out.println("hi in test");
     }
 }

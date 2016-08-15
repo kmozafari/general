@@ -1,8 +1,8 @@
 package ir.kmozafari.general.persistence.entity;
 
-import ir.kmozafari.general.common.model.persistence.Role;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by kourosh on 8/8/16.
@@ -16,15 +16,16 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "EMAIL", nullable = false, unique = true)
-    private String email;
+    @Column(name = "USERID", nullable = false, unique = true)
+    private String userId;
 
     @Column(name = "PASSWORD", nullable = false)
     private String password;
 
-    @Column(name = "ROLE", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private Role role;
+    @Column(name = "ROLES", nullable = false)
+    @ManyToMany
+    @JoinTable
+    private List<Role> roles;
 
     public Long getId() {
         return id;
@@ -34,12 +35,12 @@ public class User {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getPassword() {
@@ -50,11 +51,11 @@ public class User {
         this.password = password;
     }
 
-    public Role getRole() {
-        return role;
+    public List<Role> getRoles() {
+        return roles;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 }

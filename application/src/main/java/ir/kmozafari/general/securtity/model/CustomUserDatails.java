@@ -1,12 +1,14 @@
 package ir.kmozafari.general.securtity.model;
 
 
-import ir.kmozafari.general.common.model.persistence.Role;
+import ir.kmozafari.general.persistence.entity.Authority;
+import ir.kmozafari.general.persistence.entity.Role;
 import ir.kmozafari.general.persistence.entity.User;
+import ir.kmozafari.general.persistence.util.SecurityUtil;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 
-import java.util.Collection;
+import java.util.*;
 
 /**
  * Created by kourosh on 8/12/16.
@@ -17,7 +19,7 @@ public class CustomUserDatails extends org.springframework.security.core.userdet
     private User user;
 
     public CustomUserDatails(User user) {
-        super(user.getEmail(), user.getPassword(), AuthorityUtils.createAuthorityList(user.getRole().toString()));
+        super(user.getUserId(), user.getPassword(), AuthorityUtils.createAuthorityList(SecurityUtil.authorityList(user.getRoles())));
         this.user = user;
     }
 
@@ -29,7 +31,7 @@ public class CustomUserDatails extends org.springframework.security.core.userdet
         return user.getId();
     }
 
-    public Role getRole() {
-        return user.getRole();
+    public List<Role> getRoles() {
+        return user.getRoles();
     }
 }

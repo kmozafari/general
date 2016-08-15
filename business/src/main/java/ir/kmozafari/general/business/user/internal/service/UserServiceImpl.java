@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
     }
 
     public User getUserByEmail(String email) {
-        return userRepository.findByEmail(email);
+        return userRepository.findByUserId(email);
     }
 
     public void addUser(User user) {
