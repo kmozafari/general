@@ -1,9 +1,7 @@
 package com.test;
 
 import ir.kmozafari.application.Application;
-import ir.kmozafari.general.business.user.internal.api.UserService;
-import ir.kmozafari.general.common.model.persistence.Role;
-import ir.kmozafari.general.persistence.entity.User;
+import ir.kmozafari.general.business.security.internal.api.UserService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,7 +31,7 @@ public class MyTest {
 //        User user = new User();
 //        user.setEmail("a@b.com");
 //        user.setPassword("aaaaaa");
-//        user.setRole(Role.ADMIN);
+//        user.setRole(RoleDto.ADMIN);
 //
 //        userService.addUser(user);
     }
@@ -44,7 +42,7 @@ public class MyTest {
 //        User user = new User();
 //        user.setEmail("e@n.com");
 //        user.setPassword("bbbbb");
-//        user.setRole(Role.USER);
+//        user.setRole(RoleDto.USER);
 //        userService.addUser(user);
 //
 //        User u = userService.getUserByEmail("a@b.com");

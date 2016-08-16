@@ -1,24 +1,15 @@
-package ir.kmozafari.general.persistence.entity;
-
-import javax.persistence.*;
+package ir.kmozafari.general.common.dto.persistence;
 
 /**
  * Created by kourosh on 8/15/16.
  */
 
-@Entity
-@Table(name = "AUTHORITY")
-public class Authority {
+public class AuthorityDto {
 
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(unique = true)
     private String name;
 
-    @Column(unique = true)
     private String persianName;
 
     public Long getId() {

@@ -32,11 +32,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/", "/public/**").permitAll()
-                .antMatchers("/admin/**").hasAuthority("ADMIN")
+                .antMatchers("/admin/**").hasAuthority("superUser")
 //                .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
-                .antMatchers("/user/**").hasAuthority("USER")
+                .antMatchers("/user/**").hasAuthority("user")
 //                .antMatchers("/user/**").access("hasRole('ROLE_USER')")
-                .and().formLogin().loginPage("/login").defaultSuccessUrl("/")
+                .and().formLogin().loginPage("/login")
                 .usernameParameter("ssoId").passwordParameter("password")
                 .and().csrf()
                 .and().exceptionHandling().accessDeniedPage("/AccessDenied");

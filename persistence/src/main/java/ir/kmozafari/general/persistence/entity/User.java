@@ -23,7 +23,7 @@ public class User {
     private String password;
 
     @Column(name = "ROLES", nullable = false)
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable
     private List<Role> roles;
 

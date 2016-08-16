@@ -1,25 +1,21 @@
-package ir.kmozafari.general.persistence.entity;
+package ir.kmozafari.general.common.dto.persistence;
 
-import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by kourosh on 8/15/16.
  */
 
-@Entity
-@Table(name = "AUTHORITY")
-public class Authority {
+public class RoleDto {
 
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(unique = true)
     private String name;
 
-    @Column(unique = true)
     private String persianName;
+
+    private List<AuthorityDto> authorities;
 
     public Long getId() {
         return id;
@@ -43,5 +39,13 @@ public class Authority {
 
     public void setPersianName(String persianName) {
         this.persianName = persianName;
+    }
+
+    public List<AuthorityDto> getAuthorities() {
+        return authorities;
+    }
+
+    public void setAuthorities(List<AuthorityDto> authorities) {
+        this.authorities = authorities;
     }
 }

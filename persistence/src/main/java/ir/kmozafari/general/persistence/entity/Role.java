@@ -15,12 +15,14 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(unique = true)
     private String name;
 
+    @Column(unique = true)
     private String persianName;
 
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable
     private List<Authority> authorities;
 

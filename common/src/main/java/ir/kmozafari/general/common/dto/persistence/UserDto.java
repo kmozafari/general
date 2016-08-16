@@ -1,17 +1,19 @@
 package ir.kmozafari.general.common.dto.persistence;
 
-import ir.kmozafari.general.common.model.persistence.Role;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 /**
  * Created by k.mozafari on 8/9/2016.
  */
 public class UserDto {
 
+    private Long id;
+
     @NotEmpty
-    private String email;
+    private String userId;
 
     @NotEmpty
     private String password;
@@ -20,14 +22,14 @@ public class UserDto {
     private String repeatedPassword;
 
     @NotNull
-    private Role role;
+    private List<RoleDto> roles;
 
-    public String getEmail() {
-        return email;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getPassword() {
@@ -46,11 +48,19 @@ public class UserDto {
         this.repeatedPassword = repeatedPassword;
     }
 
-    public Role getRole() {
-        return role;
+    public List<RoleDto> getRoles() {
+        return roles;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRoles(List<RoleDto> roles) {
+        this.roles = roles;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
