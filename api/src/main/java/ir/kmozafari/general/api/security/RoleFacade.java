@@ -13,5 +13,7 @@ public interface RoleFacade {
 
     RoleDto getRole(String name);
 
+    RoleDto getRole(Long id);
+
     List<RoleDto> getAllRoles();
 }

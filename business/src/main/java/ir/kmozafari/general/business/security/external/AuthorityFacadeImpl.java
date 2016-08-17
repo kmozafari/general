@@ -8,6 +8,8 @@ import ir.kmozafari.general.persistence.entity.Authority;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by k.mozafari on 8/16/2016.
  */
@@ -31,5 +33,17 @@ public class AuthorityFacadeImpl implements AuthorityFacade {
     public AuthorityDto getAuthority(String name) {
         Authority authority = authorityService.getAuthorityByName(name);
         return mapperService.map(authority, AuthorityDto.class);
+    }
+
+    @Override
+    public AuthorityDto getAuthority(Long id) {
+        Authority authority = authorityService.getAuthorityById(id);
+        return mapperService.map(authority, AuthorityDto.class);
+    }
+
+    @Override
+    public List<AuthorityDto> getAllAuthorities() {
+        List<Authority> allAuthorities = authorityService.getAllAuthorities();
+        return mapperService.map(allAuthorities, List.class);
     }
 }

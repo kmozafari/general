@@ -36,6 +36,12 @@ public class RoleFacadeImpl implements RoleFacade {
     }
 
     @Override
+    public RoleDto getRole(Long id) {
+        Role role = roleService.getRoleById(id);
+        return mapperService.map(role, RoleDto.class);
+    }
+
+    @Override
     public List<RoleDto> getAllRoles() {
         List<Role> allRoles = roleService.getAllRoles();
         return mapperService.map(allRoles, List.class);
