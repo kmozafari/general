@@ -4,7 +4,7 @@ import ir.kmozafari.general.api.security.UserFacade;
 import ir.kmozafari.general.business.security.internal.api.UserService;
 import ir.kmozafari.general.business.security.mapper.MapperService;
 import ir.kmozafari.general.common.dto.persistence.UserDto;
-import ir.kmozafari.general.persistence.entity.User;
+import ir.kmozafari.general.persistence.entity.auth.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

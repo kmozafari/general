@@ -1,7 +1,7 @@
 package ir.kmozafari.general.persistence.util;
 
-import ir.kmozafari.general.persistence.entity.Authority;
-import ir.kmozafari.general.persistence.entity.Role;
+import ir.kmozafari.general.persistence.entity.auth.Authority;
+import ir.kmozafari.general.persistence.entity.auth.Role;
 
 import java.util.HashSet;
 import java.util.Iterator;

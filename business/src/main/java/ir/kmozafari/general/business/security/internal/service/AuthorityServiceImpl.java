@@ -1,7 +1,7 @@
 package ir.kmozafari.general.business.security.internal.service;
 
 import ir.kmozafari.general.business.security.internal.api.AuthorityService;
-import ir.kmozafari.general.persistence.entity.Authority;
+import ir.kmozafari.general.persistence.entity.auth.Authority;
 import ir.kmozafari.general.persistence.repository.AuthorityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

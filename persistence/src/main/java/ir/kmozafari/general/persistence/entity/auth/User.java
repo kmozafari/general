@@ -1,5 +1,7 @@
-package ir.kmozafari.general.persistence.entity;
+package ir.kmozafari.general.persistence.entity.auth;
 
+
+import ir.kmozafari.general.persistence.entity.BaseEntity;
 
 import javax.persistence.*;
 import java.util.List;
@@ -10,7 +12,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "USER")
-public class User {
+public class User extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

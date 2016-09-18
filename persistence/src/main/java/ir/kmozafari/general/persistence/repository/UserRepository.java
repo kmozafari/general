@@ -1,6 +1,6 @@
 package ir.kmozafari.general.persistence.repository;
 
-import ir.kmozafari.general.persistence.entity.User;
+import ir.kmozafari.general.persistence.entity.auth.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

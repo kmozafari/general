@@ -4,7 +4,7 @@ import ir.kmozafari.general.api.security.AuthorityFacade;
 import ir.kmozafari.general.business.security.internal.api.AuthorityService;
 import ir.kmozafari.general.business.security.mapper.MapperService;
 import ir.kmozafari.general.common.dto.persistence.AuthorityDto;
-import ir.kmozafari.general.persistence.entity.Authority;
+import ir.kmozafari.general.persistence.entity.auth.Authority;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

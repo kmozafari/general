@@ -4,7 +4,7 @@ import ir.kmozafari.general.api.security.RoleFacade;
 import ir.kmozafari.general.business.security.internal.api.RoleService;
 import ir.kmozafari.general.business.security.mapper.MapperService;
 import ir.kmozafari.general.common.dto.persistence.RoleDto;
-import ir.kmozafari.general.persistence.entity.Role;
+import ir.kmozafari.general.persistence.entity.auth.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

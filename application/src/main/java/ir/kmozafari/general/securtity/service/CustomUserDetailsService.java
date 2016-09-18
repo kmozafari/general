@@ -1,7 +1,7 @@
 package ir.kmozafari.general.securtity.service;
 
 import ir.kmozafari.general.business.security.internal.api.UserService;
-import ir.kmozafari.general.persistence.entity.User;
+import ir.kmozafari.general.persistence.entity.auth.User;
 import ir.kmozafari.general.securtity.model.CustomUserDatails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

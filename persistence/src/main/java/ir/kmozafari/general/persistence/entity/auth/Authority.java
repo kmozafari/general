@@ -1,4 +1,6 @@
-package ir.kmozafari.general.persistence.entity;
+package ir.kmozafari.general.persistence.entity.auth;
+
+import ir.kmozafari.general.persistence.entity.BaseEntity;
 
 import javax.persistence.*;
 
@@ -8,7 +10,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "AUTHORITY")
-public class Authority {
+public class Authority extends BaseEntity {
 
 
     @Id

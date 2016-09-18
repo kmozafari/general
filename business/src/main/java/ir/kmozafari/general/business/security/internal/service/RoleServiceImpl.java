@@ -1,7 +1,7 @@
 package ir.kmozafari.general.business.security.internal.service;
 
 import ir.kmozafari.general.business.security.internal.api.RoleService;
-import ir.kmozafari.general.persistence.entity.Role;
+import ir.kmozafari.general.persistence.entity.auth.Role;
 import ir.kmozafari.general.persistence.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

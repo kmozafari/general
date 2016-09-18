@@ -1,11 +1,9 @@
 package ir.kmozafari.general.securtity.model;
 
 
-import ir.kmozafari.general.persistence.entity.Authority;
-import ir.kmozafari.general.persistence.entity.Role;
-import ir.kmozafari.general.persistence.entity.User;
+import ir.kmozafari.general.persistence.entity.auth.Role;
+import ir.kmozafari.general.persistence.entity.auth.User;
 import ir.kmozafari.general.persistence.util.SecurityUtil;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 
 import java.util.*;

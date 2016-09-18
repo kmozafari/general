@@ -1,6 +1,6 @@
 package ir.kmozafari.general.business.security.internal.api;
 
-import ir.kmozafari.general.persistence.entity.Authority;
+import ir.kmozafari.general.persistence.entity.auth.Authority;
 
 import java.util.List;
 
