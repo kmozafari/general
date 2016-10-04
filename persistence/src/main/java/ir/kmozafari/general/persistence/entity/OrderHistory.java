@@ -1,21 +1,24 @@
 package ir.kmozafari.general.persistence.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+
+import javax.persistence.*;
 
 /**
  * Created by kourosh on 9/18/16.
  */
 
 @Entity
-public class Order extends BaseEntity {
+public class OrderHistory extends BaseEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-//    @ManyToOne
+    @ManyToOne
     private Product product;
+
+    @ManyToOne
+    private Customer customer;
 
     public Long getId() {
         return id;
@@ -31,5 +34,13 @@ public class Order extends BaseEntity {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }

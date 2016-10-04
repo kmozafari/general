@@ -1,8 +1,7 @@
 package ir.kmozafari.general.persistence.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by kourosh on 9/18/16.
@@ -12,10 +11,14 @@ import javax.persistence.ManyToOne;
 public class Basket extends BaseEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-//    @ManyToOne
-    private Product product;
+    @ManyToMany
+    private List<Product> products;
+
+    @ManyToOne
+    private Customer customer;
 
     public Long getId() {
         return id;
@@ -25,11 +28,19 @@ public class Basket extends BaseEntity {
         this.id = id;
     }
 
-    public Product getProduct() {
-        return product;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }

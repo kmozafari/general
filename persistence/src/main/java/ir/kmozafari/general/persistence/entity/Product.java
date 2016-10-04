@@ -11,16 +11,13 @@ import java.util.List;
 public class Product extends BaseEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @OneToMany
-    private List<Opinion> opinions;
+    private List<OrderHistory> orders;
 
-//    @ManyToOne
-    private Producer producer;
-
-    private List<Order> orders;
-
+    @ManyToMany(mappedBy = "products")
     private List<Basket> baskets;
 
 
@@ -40,27 +37,11 @@ public class Product extends BaseEntity {
         this.id = id;
     }
 
-    public List<Opinion> getOpinions() {
-        return opinions;
-    }
-
-    public void setOpinions(List<Opinion> opinions) {
-        this.opinions = opinions;
-    }
-
-    public List<Order> getOrders() {
+    public List<OrderHistory> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<Order> orders) {
+    public void setOrders(List<OrderHistory> orders) {
         this.orders = orders;
-    }
-
-    public Producer getProducer() {
-        return producer;
-    }
-
-    public void setProducer(Producer producer) {
-        this.producer = producer;
     }
 }

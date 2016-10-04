@@ -1,8 +1,6 @@
 package ir.kmozafari.general.persistence.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -13,6 +11,7 @@ import java.util.List;
 public class Category extends BaseEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @OneToMany
